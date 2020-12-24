@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <h1>{{ user_profile.name }}</h1>
+            <h1>{{ user_profile.email }}</h1>
+            <h1>{{ user_profile.phone }}</h1>
+            <hr>
+            <br>
+            <P>Summary</P>
+            <p>{{ user_profile.summary }}</p>
+            <hr>
+            <br>
+
+            <P>Skills</P>
+            <p>{{ user_profile.skills }}</p>
+            <hr>
+            <br>
+
+            <P>Education</P>
+            <ul>
+                <li>
+                    {{ user_profile.school }}
+                </li>
+                <li>
+                    {{ user_profile.university }}
+                </li>
+            </ul>
+            <hr>
+            <br>
+
+
+            <P>Degree</P>
+            <p>{{ user_profile.degree }}</p>
+            <hr>
+            <br>
+
+            <P>Work Experiences</P>
+            <p>{{ user_profile.previous_work }}</p>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
