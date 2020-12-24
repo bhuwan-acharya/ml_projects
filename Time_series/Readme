@@ -1,0 +1,38 @@
+This is the climate dataset of the city of Dehli, India from 1st January 2013 to 24th April 2017. This dataset is downloaded from the kaggle dataset. The dataset consist of the 4 parameters which are meantemp, hudity, wind_speed, meanpressure.
+    meantemp :- Mean temperature averaged out from multiple 3 hour intervals in a day.
+    himidity :- Humidity value for the day (units are grams of water vapor per cubic meter volume of air).
+    wind_speed :- Wind speed measured in kmph.
+    meanpressure :- Pressure reading of weather (measure in atm)
+    
+This project is fully concerned with the time series analysis. Here I am going to perform some analysis with the data in the begining and then build the model for forecasting the future.
+
+Overview of this project is as follow:
+    1. Feature Engineering
+        a. check and handle missing value
+        b. checking and changing the frequency of the data(Resampling(Upsampling and downsampling))
+        c. performing Exploratory Data Analysis(EDA)
+        d. Time Series Decomposition
+            i.    trend
+            ii.   seasonality
+            iii.  residue
+            (I will be performing Moving Average for looking the trend by smoothing the curve, Also I will be computing the anomaly using the              confidence interval)
+        e. Compare the diffrent time series data(for example:- meantemp vs humity, meantemp vs humidity vs meanpressure)
+            I. Normalized the data before comparing the time series
+        f. Stationarity check (Augmented Dicky-Fuller Test)
+        g. Plotting AutoCorrelation Function(ACF) and Partial AutoCorrelation Function(PACF)
+    2. Model Creation
+        a. AR model
+        b. ARMA model
+        c. ARIMA model
+        d. SARIMA model
+        (I will be using pmdarima also to perform auto_arima which gives us the best arima model based on the aic value)
+    3. Model Validation
+        a. Predicting the test dataset
+        b. Cross Validation
+        c. Computing Mean square error, Root mean square error, Rsquare, Mean Avsolute error, Median Absolute Error, Mean Squared Logarithmic            Error, Mean Absolute Percentage Error
+    4. Saving the model
+         a. using pickle
+         b. using joblib
+         c. using parquet
+         (Difference between pickle, joblib and parquet)
+    5. Loading the model and predicting the future
