@@ -28,11 +28,6 @@ Overview of this project is as follow:
         (I will be using pmdarima also to perform auto_arima which gives us the best arima model based on the aic value)
     3. Model Validation
         a. Predicting the test dataset
-        b. Cross Validation
-        c. Computing Mean square error, Root mean square error, Rsquare, Mean Avsolute error, Median Absolute Error, Mean Squared Logarithmic            Error, Mean Absolute Percentage Error
     4. Saving the model
          a. using pickle
-         b. using joblib
-         c. using parquet
-         (Difference between pickle, joblib and parquet)
     5. Loading the model and predicting the future
